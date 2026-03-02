@@ -19,7 +19,7 @@ class SubTransactionCommand extends BaseSubCommand {
 		private API $API
 	) {
 		parent::__construct($pluginEP, "transaction", "transaction between balances currency");
-		$this->setPermission(DefaultPermissions::ROOT_USER);
+		$this->setPermissions([DefaultPermissions::ROOT_USER]);
 	}
 
 	public function getAPI() : API{

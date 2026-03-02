@@ -30,7 +30,7 @@ class CurrencyCommand extends BaseCommand implements PluginOwned {
 			mb_strtolower($this->currency->getName(), "UTF-8"),
 			str_replace("{command.name}", $this->currency->getName(), API::getLang()->getNested("command.about"))
 		);
-		$this->setPermission(DefaultPermissions::ROOT_USER);
+		$this->setPermissions([DefaultPermissions::ROOT_USER]);
 	}
 
 	protected function prepare(): void {

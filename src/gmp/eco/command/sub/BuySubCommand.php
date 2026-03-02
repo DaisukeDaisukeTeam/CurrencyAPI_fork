@@ -15,7 +15,7 @@ class BuySubCommand extends BaseSubCommand {
 		private API $API
 	) {
 		parent::__construct($pluginEP, "buy", "buy currency");
-		$this->setPermission(DefaultPermissions::ROOT_USER);
+		$this->setPermissions([DefaultPermissions::ROOT_USER]);
 	}
 
 	public function getAPI() : API{

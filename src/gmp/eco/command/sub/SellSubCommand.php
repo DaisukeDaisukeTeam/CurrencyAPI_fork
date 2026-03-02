@@ -19,7 +19,7 @@ class SellSubCommand extends BaseSubCommand {
 		private API $API
 	) {
 		parent::__construct($pluginEP, "sell", "sell currency");
-		$this->setPermission(DefaultPermissions::ROOT_USER);
+		$this->setPermissions([DefaultPermissions::ROOT_USER]);
 	}
 
 	public function getAPI() : API{
