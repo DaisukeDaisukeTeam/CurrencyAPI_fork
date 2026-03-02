@@ -18,7 +18,7 @@ class SubAddCommand extends BaseSubCommand {
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct($pluginEP, "add", "add to balance currency");
+		parent::__construct("add", "add to balance currency");
 		$this->setPermission(DefaultPermissions::ROOT_OPERATOR);
 	}
 

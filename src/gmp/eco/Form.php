@@ -3,7 +3,7 @@ namespace gmp\eco;
 
 use gmp\eco\player\Player;
 use jojoe77777\FormAPI\SimpleForm;
-use gmp\eco\currency\{Currency};
+use gmp\eco\currency\Currency;
 
 final class Form {
 	public static function sendSelf(string $name, string $content, Player $player, Currency $currency): void {

@@ -18,7 +18,7 @@ class SubSetCommand extends BaseSubCommand {
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct($pluginEP, "set", "set balance currency");
+		parent::__construct("set", "set balance currency");
 		$this->setPermission(DefaultPermissions::ROOT_OPERATOR);
 	}
 

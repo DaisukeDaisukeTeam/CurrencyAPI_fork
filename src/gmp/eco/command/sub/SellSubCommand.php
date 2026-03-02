@@ -18,7 +18,7 @@ class SellSubCommand extends BaseSubCommand {
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct($pluginEP, "sell", "sell currency");
+		parent::__construct("sell", "sell currency");
 		$this->setPermission(DefaultPermissions::ROOT_USER);
 	}
 

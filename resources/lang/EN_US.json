@@ -14,7 +14,7 @@
 		"dept": "Your have been deducted {count}{sing} due to debt, now it's {balance}{sing}",
 		"saved": "Your balance successful saved",
 		"nomoney": "Missing {missing}{sing}",
-		"nocurrency": "ERROR: nocurrency"
+		"nocurrency": "You not have {currency} or {currency} not exists"
 	},
 	"subform": {
 		"not_buy": "you're missing {c.name}, count: {count.not}",

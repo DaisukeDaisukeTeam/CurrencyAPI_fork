@@ -18,7 +18,7 @@ class SubRemoveCommand extends BaseSubCommand {
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct($pluginEP, "remove", "remove from balance currency");
+		parent::__construct("remove", "remove from balance currency");
 		$this->setPermission(DefaultPermissions::ROOT_OPERATOR);
 	}
 

@@ -103,7 +103,11 @@ final class Player extends PPlayer {
 
 		if (!$this->haveCurrency($currencyName)) {
 			if ($message) $this->sendActionBarMessage(
-				API::getLang()->getNested("player.nocurrency")
+				str_replace(
+					"{currency}",
+					$currencyName,
+					API::getLang()->getNested("player.nocurrency")
+				)
 			);
 			return false;
 		}
@@ -199,7 +203,7 @@ final class Player extends PPlayer {
 			$this->save->save();
 			$this->save->close();
 		} catch (Exception|Error $e) {
-			$this->getServer()->getLogger()->error($e);
+			$this->getServer()->getLogger()->error((string)$e);
 		}
 		parent::disconnect($reason, $quitMessage, $disconnectScreenMessage);
 	}

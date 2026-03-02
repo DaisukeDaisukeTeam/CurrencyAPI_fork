@@ -80,6 +80,7 @@ class SQL {
 
 	public function save(): void {
 		$this->initialize();
+		if ($this->pdo == null) return;
 		
 		// Prepare the appropriate statement based on database type
 		if ($this->type === 'sqlite') {
