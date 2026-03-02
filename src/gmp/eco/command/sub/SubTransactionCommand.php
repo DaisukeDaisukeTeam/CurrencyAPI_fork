@@ -14,10 +14,11 @@ use gmp\eco\currency\Currency;
 
 class SubTransactionCommand extends BaseSubCommand {
 	public function __construct(
+		PluginEP $pluginEP,
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct("transaction", "transaction between balances currency");
+		parent::__construct($pluginEP, "transaction", "transaction between balances currency");
 		$this->setPermission(DefaultPermissions::ROOT_USER);
 	}
 

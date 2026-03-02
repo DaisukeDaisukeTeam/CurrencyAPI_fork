@@ -14,10 +14,11 @@ use gmp\eco\currency\Currency;
 
 class SellSubCommand extends BaseSubCommand {
 	public function __construct(
+		PluginEP $pluginEP,
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct("sell", "sell currency");
+		parent::__construct($pluginEP, "sell", "sell currency");
 		$this->setPermission(DefaultPermissions::ROOT_USER);
 	}
 
