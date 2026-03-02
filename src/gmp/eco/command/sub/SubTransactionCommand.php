@@ -18,7 +18,7 @@ class SubTransactionCommand extends BaseSubCommand {
 		private API $API
 	) {
 		parent::__construct("transaction", "transaction between balances currency");
-		$this->setPermissions([DefaultPermissions::ROOT_USER]);
+		$this->setPermission(DefaultPermissions::ROOT_USER);
 	}
 
 	public function getAPI() : API{
