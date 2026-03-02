@@ -14,7 +14,6 @@ use gmp\eco\currency\Currency;
 
 class SubRemoveCommand extends BaseSubCommand {
 	public function __construct(
-		PluginEP $pluginEP,
 		private Currency $currency,
 		private API $API
 	) {

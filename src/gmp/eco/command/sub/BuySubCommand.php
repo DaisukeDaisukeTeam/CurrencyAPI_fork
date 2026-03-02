@@ -10,7 +10,6 @@ use gmp\eco\currency\Currency;
 
 class BuySubCommand extends BaseSubCommand {
 	public function __construct(
-		PluginEP $pluginEP,
 		private Currency $currency,
 		private API $API
 	) {
