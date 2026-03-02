@@ -6,7 +6,7 @@ projects:
   CurrencyAPI:
     path: ""
     libs:
-      - src: Muqsit/muqsit/SimplePacketHandler
+      - src: Muqsit/SimplePacketHandler
         version: 0.1.6
       - src: CortexPE/CortexPE/Commando
         version: 3.2.0
