@@ -4,8 +4,8 @@
     "require": {
         "pocketmine/pocketmine-mp": "^5.0.0",
         "muqsit/simple-packet-handler": "^0.1.5",
-        "cortexpe/commando": "dev-master",
-        "jojoe77777/formapi": "dev-master"
+        "jojoe77777/formapi": "dev-master",
+        "paroxity/commando": "^3.2"
     },
     "license": "GPL-3.0",
     "autoload": {
