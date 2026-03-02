@@ -14,11 +14,10 @@ use gmp\eco\currency\Currency;
 
 class SubSetCommand extends BaseSubCommand {
 	public function __construct(
-		PluginEP $pluginEP,
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct($pluginEP, "set", "set balance currency");
+		parent::__construct("set", "set balance currency");
 		$this->setPermissions([DefaultPermissions::ROOT_OPERATOR]);
 	}
 

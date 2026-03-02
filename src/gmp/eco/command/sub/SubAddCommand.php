@@ -14,11 +14,10 @@ use gmp\eco\currency\Currency;
 
 class SubAddCommand extends BaseSubCommand {
 	public function __construct(
-		PluginEP $pluginEP,
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct($pluginEP, "add", "add to balance currency");
+		parent::__construct("add", "add to balance currency");
 		$this->setPermissions([DefaultPermissions::ROOT_OPERATOR]);
 	}
 

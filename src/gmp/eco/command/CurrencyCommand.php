@@ -30,16 +30,16 @@ class CurrencyCommand extends BaseCommand implements PluginOwned {
 			mb_strtolower($this->currency->getName(), "UTF-8"),
 			str_replace("{command.name}", $this->currency->getName(), API::getLang()->getNested("command.about"))
 		);
-		$this->setPermissions([DefaultPermissions::ROOT_USER]);
+		$this->setPermission(DefaultPermissions::ROOT_USER);
 	}
 
 	protected function prepare(): void {
-		$this->registerSubCommand(new BuySubCommand($this->pluginEP, $this->currency, $this->API));
-		$this->registerSubCommand(new SellSubCommand($this->pluginEP, $this->currency, $this->API));
-		$this->registerSubCommand(new SubSetCommand($this->pluginEP, $this->currency, $this->API));
-		$this->registerSubCommand(new SubAddCommand($this->pluginEP, $this->currency, $this->API));
-		$this->registerSubCommand(new SubRemoveCommand($this->pluginEP, $this->currency, $this->API));
-		$this->registerSubCommand(new SubTransactionCommand($this->pluginEP, $this->currency, $this->API));
+		$this->registerSubCommand(new BuySubCommand($this->currency, $this->API));
+		$this->registerSubCommand(new SellSubCommand($this->currency, $this->API));
+		$this->registerSubCommand(new SubSetCommand($this->currency, $this->API));
+		$this->registerSubCommand(new SubAddCommand($this->currency, $this->API));
+		$this->registerSubCommand(new SubRemoveCommand($this->currency, $this->API));
+		$this->registerSubCommand(new SubTransactionCommand($this->currency, $this->API));
 	}
 
 	public function onRun(CommandSender $sender, string $aliasUsed, array $args): void {

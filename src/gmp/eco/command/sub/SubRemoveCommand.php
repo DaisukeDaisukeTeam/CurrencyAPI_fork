@@ -14,11 +14,10 @@ use gmp\eco\currency\Currency;
 
 class SubRemoveCommand extends BaseSubCommand {
 	public function __construct(
-		PluginEP $pluginEP,
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct($pluginEP, "remove", "remove from balance currency");
+		parent::__construct("remove", "remove from balance currency");
 		$this->setPermissions([DefaultPermissions::ROOT_OPERATOR]);
 	}
 

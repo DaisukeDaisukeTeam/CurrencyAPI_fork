@@ -10,12 +10,11 @@ use gmp\eco\currency\Currency;
 
 class BuySubCommand extends BaseSubCommand {
 	public function __construct(
-		PluginEP $pluginEP,
 		private Currency $currency,
 		private API $API
 	) {
-		parent::__construct($pluginEP, "buy", "buy currency");
-		$this->setPermissions([DefaultPermissions::ROOT_USER]);
+		parent::__construct("buy", "buy currency");
+		$this->setPermissions(DefaultPermissions::ROOT_USER);
 	}
 
 	public function getAPI() : API{
